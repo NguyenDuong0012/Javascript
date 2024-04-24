@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cards</title>
+    <!-- Liên kết đến Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+   
+    
+    <link rel="stylesheet" href="./css.css">
+    
+    <!-- CSS cho kiểu dáng trang -->
+    <style>
+        h1 {
+            color: red;
+            text-align: center; /* Canh giữa tiêu đề */
+        }
+
+        /* Tăng khoảng cách giữa các phần tử */
+        .container {
+            margin-top: 20px; /* Thêm khoảng cách trên cùng cho phần container */
+        }
+
+        /* Kiểu cho card */
+        .product-card {
+            border: 1px solid #ddd; /* Đường viền cho card */
+            border-radius: 5px; /* Bo tròn góc */
+            padding: 10px; /* Khoảng cách bên trong card */
+            text-align: center; /* Canh giữa nội dung */
+            background-color: #f9f9f9; /* Màu nền cho card */
+        }
+
+        .product-card img {
+            width: 200px; /* Kích thước ảnh */
+            height: 100px;
+            object-fit: cover; /* Đảm bảo ảnh không bị méo */
+        }
+
+        /* Vùng chứa các thẻ sản phẩm với Flexbox */
+        .product-card-container {
+            display: flex; /* Sử dụng Flexbox */
+            flex-wrap: wrap; /* Cho phép các thẻ xếp theo hàng */
+            gap: 10px; /* Khoảng cách giữa các thẻ */
+            justify-content: center; /* Canh giữa các thẻ */
+        }
+
+        /* Kiểu cho các nút */
+        .product-card button {
+            margin: 5px; /* Khoảng cách giữa các nút */
+        }
+        
+        /* Kiểu cho thanh tìm kiếm */
+        .search-bar {
+            margin-bottom: 20px; /* Khoảng cách bên dưới thanh tìm kiếm */
+
+    h1 {
+            color: red;
+            text-align: center; /* Canh giữa tiêu đề */
+        }
+
+        /* Tăng khoảng cách giữa các phần tử */
+        .container {
+            margin-top: 20px; /* Thêm khoảng cách trên cùng cho phần container */
+        }
+
+        /* Kiểu cho card */
+        .product-card {
+            border: 1px solid #ddd; /* Đường viền cho card */
+            border-radius: 5px; /* Bo tròn góc */
+            padding: 10px; /* Khoảng cách bên trong card */
+            text-align: center; /* Canh giữa nội dung */
+            background-color: #f9f9f9; /* Màu nền cho card */
+        }
+
+        .product-card img {
+            width: 200px; /* Kích thước ảnh */
+            height: 100px;
+            object-fit: cover; /* Đảm bảo ảnh không bị méo */
+        }
+
+        /* Vùng chứa các thẻ sản phẩm với Flexbox */
+        .product-card-container {
+            display: flex; /* Sử dụng Flexbox */
+            flex-wrap: wrap; /* Cho phép các thẻ xếp theo hàng */
+            gap: 10px; /* Khoảng cách giữa các thẻ */
+            justify-content: center; /* Canh giữa các thẻ */
+        }
+
+        /* Kiểu cho các nút */
+        .product-card button {
+            margin: 5px; /* Khoảng cách giữa các nút */
+        }
+        
+        /* Kiểu cho thanh tìm kiếm */
+        .search-bar {
+            margin-bottom: 20px; /* Khoảng cách bên dưới thanh tìm kiếm */
+}
+
+#banner{
+      width: 100%;
+    background-image :url("./img/banner.png");
+    height: 463px;
+    margin-top:40px;
+    display: flex;
+    padding:0px 133px;
+    position:relative;
+}
+
+#banner .box-left ,#banner .box-right {
+    width: 50%;
+}
+
+#banner  .box-left h2 {
+    font-size:48px;
+    margin-top:75px;
+    color:#fff;
+}
+
+#banner .box-left p {
+    color:#D0D0D0;
+}
+
+#banner .box-left button {
+    width: 191px;
+    height: 40px;
+    margin-top:41px;
+    background:#1d1a1a;
+    border:none;
+    outline:none;
+    color:#fff;
+    font-weight: bold;
+    border-radius: 20px;
+    transition:0.4s;
+}
+
+#banner .box-left button:hover {
+    background:orange;
+}
+
+#banner .box-right {
+    padding-left:200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner .box-right img {
+    margin:0px 10px;
+    animation :animation 3s infinite linear; 
+}
+
+
+#banner .box-right img:nth-child(1)
+{
+    animation-delay: 0.5s;
+}
+#banner .box-right img:nth-child(2)
+{
+    
+    animation-delay: 1s;
+}
+
+@keyframes animation {
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+    
+}
+
+.to-bottom {
+    position:absolute;
+    bottom:-40px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+}
+    
+#footer {
+    width: 100%;
+    background:rgb(0,0,0,0.79);
+    height: 322px;
+    margin-top:338px;
+    padding:0px 63px;
+    padding-top:57px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer .box {
+    width: 250px;
+    color:#fff;
+}
+
+#footer .box .quick-menu {
+    margin-top:40px;
+
+}
+
+
+#footer .box .quick-menu .item{
+    margin-bottom:12px;
+
+}
+#footer .box .quick-menu ,.item a{
+    color:#fff;
+    text-decoration: none;
+}
+
+
+
+#footer .box form input {
+    width: 294px;
+    height: 42px;
+    background:transparent;
+    padding-left:20px;
+    color:#fff;
+    margin-top:30px;
+}
+
+#footer .box form button {
+    background:#362f2f;
+    box-shadow: 5px 5px 4px rgba(0,0,0.25);
+    width: 163px;
+    height: 38px;
+    margin-top:29px;
+    color:#fff;
+}
+    </style>
+</head>
+<body>
+     <button class="admin-button">
+        <a href="./admin.html" style="color: white; text-decoration: none;">Trang admin</a>
+    </button>
+
+    <div class="container">
+        <h1>Restaurant Store</h1> <!-- Tiêu đề chính -->
+        
+         <div id="banner">
+            <div class="box-left">
+                <h2>
+                    <span>THỨC ĂN</span>
+                    <br>
+                    <span>THƯỢNG HẠNG</span>
+                </h2>
+                <p>Chuyên cung cấp các món ăn đảm bảo dinh dưỡng
+                    hợp vệ sinh đến người dùng,phục vụ người dùng 1 cái
+                    hoàn hảo nhất</p>
+                <button>Mua ngay</button>
+            </div>
+            <div class="box-right">
+                <img src="./img/img_1.png" alt="">
+                <img src="./img/img_2.png" alt="">
+                <img src="./img/img_3.png" alt="">
+            </div>
+            <div class="to-bottom">
+               
+            </div>
+        </div>
+        <!-- Thanh tìm kiếm -->
+        <div class="search-bar text-center">
+            <input id="searchInput" type="text" placeholder="Tìm kiếm sản phẩm..." class="form-control w-50 mx-auto" onkeyup="searchProducts()" />
+        </div>
+        
+        <!-- Vùng chứa các thẻ sản phẩm -->
+        <div id="productCardContainer" class="product-card-container">
+            <!-- Dữ liệu sản phẩm sẽ được chèn vào đây bởi JavaScript -->
+        </div>
+    </div>
+
+    
+    <!-- JavaScript để hiển thị các thẻ sản phẩm và thêm chức năng tìm kiếm -->
+    <script>
+    let products = []; // Lưu trữ tất cả sản phẩm để tìm kiếm
+    
+    function getProducts(callback) {
+        fetch('https://660d3de56ddfa2943b33b390.mockapi.io/api/BT/product')
+            .then(response => response.json())
+            .then(data => {
+                products = data; // Lưu trữ danh sách sản phẩm
+                callback(null, data);
+            })
+            .catch(error => callback(error, null));
+    }
+
+    function handleProducts(error, data) {
+        if (error) {
+            console.error('Lỗi khi lấy dữ liệu sản phẩm:', error);
+        } else {
+            const productCardContainer = document.getElementById('productCardContainer');
+            productCardContainer.innerHTML = ''; // Xóa nội dung cũ trước khi hiển thị
+            data.forEach(product => {
+                const card = `<div class="product-card">
+                    <img src="${product.image}" alt="${product.name}" />
+                    <h4>${product.name}</h4>
+                    <p>Price: ${product.price}</p>
+                    <!-- Nút "Xem chi tiết" có sự kiện onclick để chuyển hướng đến trang chi tiết -->
+                    <div>
+                        <button class="btn btn-primary">Đặt mua</button>
+                        <button class="btn btn-secondary" onclick="viewProductDetails(${product.id})">Xem chi tiết</button>
+                    </div>
+                </div>`;
+                productCardContainer.innerHTML += card;
+            });
+        }
+    }
+
+    // Hàm để chuyển hướng đến trang chi tiết sản phẩm
+    function viewProductDetails(productId) {
+        window.location.href = `product-details.html?id=${productId}`;
+    }
+
+    // Hàm tìm kiếm sản phẩm dựa trên từ khóa
+    function searchProducts() {
+        const searchInput = document.getElementById('searchInput').value.toLowerCase(); // Lấy giá trị từ thanh tìm kiếm
+        const filteredProducts = products.filter(product => product.name.toLowerCase().includes(searchInput)); // Lọc sản phẩm dựa trên từ khóa
+        
+        handleProducts(null, filteredProducts); // Hiển thị danh sách sản phẩm đã lọc
+    }
+
+    getProducts(handleProducts); // Lấy dữ liệu sản phẩm và hiển thị
+
+    </script>
+    
+    <!-- Liên kết đến Bootstrap JS và các phụ thuộc -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <div id="footer">
+            <div class="box">
+                <div class="logo">
+                    <img src="./img/logo.png" alt="">
+                </div>
+                <p>Cung cấp sản phẩm với chất lượng an toàn cho quý khách</p>
+            </div>
+            <div class="box">
+                <h3>NỘI DUNG</h3>
+                <ul class="quick-menu">
+                    <div class="item">
+                        <a href="">Trang chủ</a>
+                    </div>
+                    <div class="item">
+                        <a href="">Sản phẩm</a>
+                    </div>
+                    <div class="item">
+                        <a href="">Blog</a>
+                    </div>
+                    <div class="item">
+                        <a href="">Liên hệ</a>
+                    </div>
+                </ul>
+            </div>
+            <div class="box">
+                <h3>LIÊN HỆ</h3>
+                <form action="">
+                    <input type="text" placeholder="Địa chỉ email">
+                    <button>Nhận tin</button>
+                </form>
+            </div>
+        </div>
+
+
+</body>
+  <script src="./index.js" type="text/javascript"></script>
+</html>
