@@ -1,0 +1,41 @@
+/* style.css */
+
+/* Kiểu tổng thể cho trang */
+body {
+    background-color: #f5f5f5; /* Màu nền nhẹ */
+    font-family: 'Arial', sans-serif; /* Kiểu chữ dễ đọc */
+}
+
+/* Kiểu cho tiêu đề */
+h1 {
+    text-align: center; /* Căn giữa */
+    font-size: 2rem; /* Tăng kích thước chữ */
+    color: #333; /* Màu chữ đậm */
+}
+
+/* Kiểu cho danh sách sản phẩm */
+.list-group-item {
+    cursor: pointer; /* Con trỏ chuột khi di chuyển trên các mục */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển tiếp khi hover */
+    margin-bottom: 10px; /* Khoảng cách giữa các mục */
+    border-radius: 10px; /* Bo góc */
+}
+
+/* Hiệu ứng hover cho danh sách sản phẩm */
+.list-group-item:hover {
+    background-color: #f1f1f1; /* Nền nhạt khi hover */
+}
+
+/* Kiểu cho nút "Quay về Trang chủ" */
+button {
+    border-radius: 5px; /* Bo góc */
+    padding: 10px 20px; /* Khoảng cách dọc và ngang */
+}
+
+.text-center {
+    text-align: center; /* Căn giữa */
+}
+
+.list-group {
+    padding-bottom: 10px; /* Tránh việc mục cuối cùng bị mất khoảng cách */
+}

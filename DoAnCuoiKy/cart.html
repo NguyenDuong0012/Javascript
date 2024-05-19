@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  
+   
+   <link rel="stylesheet" href="./css.css">
+    <style>
+        .wrap-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 4rem;;
+        }
+        #productCardContainer {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 4rem;
+        }
+        .wrap-back {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+        <style>
+            h1 {
+                color: red;
+                text-align: center; /* Canh giữa tiêu đề */
+            }
+    
+            /* Tăng khoảng cách giữa các phần tử */
+            .container {
+                margin-top: 20px; /* Thêm khoảng cách trên cùng cho phần container */
+            }
+    
+            /* Kiểu cho card */
+            .product-card {
+                border: 1px solid #ddd; /* Đường viền cho card */
+                border-radius: 5px; /* Bo tròn góc */
+                padding: 10px; /* Khoảng cách bên trong card */
+                text-align: center; /* Canh giữa nội dung */
+                background-color: #f9f9f9; /* Màu nền cho card */
+            }
+    
+            .product-card img {
+                width: 200px; /* Kích thước ảnh */
+                height: 100px;
+                object-fit: cover; /* Đảm bảo ảnh không bị méo */
+            }
+    
+            /* Vùng chứa các thẻ sản phẩm với Flexbox */
+            .product-card-container {
+                display: flex; /* Sử dụng Flexbox */
+                flex-wrap: wrap; /* Cho phép các thẻ xếp theo hàng */
+                gap: 10px; /* Khoảng cách giữa các thẻ */
+                justify-content: center; /* Canh giữa các thẻ */
+            }
+    
+            /* Kiểu cho các nút */
+            .product-card button {
+                margin: 5px; /* Khoảng cách giữa các nút */
+            }
+            
+            /* Kiểu cho thanh tìm kiếm */
+            .search-bar {
+                margin-bottom: 20px; /* Khoảng cách bên dưới thanh tìm kiếm */
+    
+        h1 {
+                color: red;
+                text-align: center; /* Canh giữa tiêu đề */
+            }
+    
+            /* Tăng khoảng cách giữa các phần tử */
+            .container {
+                margin-top: 20px; /* Thêm khoảng cách trên cùng cho phần container */
+            }
+    
+            /* Kiểu cho card */
+            .product-card {
+                border: 1px solid #ddd; /* Đường viền cho card */
+                border-radius: 5px; /* Bo tròn góc */
+                padding: 10px; /* Khoảng cách bên trong card */
+                text-align: center; /* Canh giữa nội dung */
+                background-color: #f9f9f9; /* Màu nền cho card */
+            }
+    
+            .product-card img {
+                width: 200px; /* Kích thước ảnh */
+                height: 100px;
+                object-fit: cover; /* Đảm bảo ảnh không bị méo */
+            }
+    
+            /* Vùng chứa các thẻ sản phẩm với Flexbox */
+            .product-card-container {
+                display: flex; /* Sử dụng Flexbox */
+                flex-wrap: wrap; /* Cho phép các thẻ xếp theo hàng */
+                gap: 10px; /* Khoảng cách giữa các thẻ */
+                justify-content: center; /* Canh giữa các thẻ */
+            }
+    
+            /* Kiểu cho các nút */
+            .product-card button {
+                margin: 5px; /* Khoảng cách giữa các nút */
+            }
+            
+            /* Kiểu cho thanh tìm kiếm */
+            .search-bar {
+                margin-bottom: 20px; /* Khoảng cách bên dưới thanh tìm kiếm */
+    }
+    
+    #banner{
+          width: 100%;
+        background-image :url("./img/banner.png");
+        height: 463px;
+        margin-top:40px;
+        display: flex;
+        padding:0px 133px;
+        position:relative;
+    }
+    
+    #banner .box-left ,#banner .box-right {
+        width: 50%;
+    }
+    
+    #banner  .box-left h2 {
+        font-size:48px;
+        margin-top:75px;
+        color:#fff;
+    }
+    
+    #banner .box-left p {
+        color:#D0D0D0;
+    }
+    
+    #banner .box-left button {
+        width: 191px;
+        height: 40px;
+        margin-top:41px;
+        background:#1d1a1a;
+        border:none;
+        outline:none;
+        color:#fff;
+        font-weight: bold;
+        border-radius: 20px;
+        transition:0.4s;
+    }
+    
+    #banner .box-left button:hover {
+        background:orange;
+    }
+    
+    #banner .box-right {
+        padding-left:200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #banner .box-right img {
+        margin:0px 10px;
+        animation :animation 3s infinite linear; 
+    }
+    
+    
+    #banner .box-right img:nth-child(1)
+    {
+        animation-delay: 0.5s;
+    }
+    #banner .box-right img:nth-child(2)
+    {
+        
+        animation-delay: 1s;
+    }
+    
+    @keyframes animation {
+        0%{
+            transform:translateY(0px);
+        }
+        50%{
+            transform: translateY(-10px);
+        }
+        100%{
+            transform: translateY(0px);
+        }
+        
+    }
+    
+    .to-bottom {
+        position:absolute;
+        bottom:-40px;
+        left:50%;
+        transform:translateX(-50%);
+    }
+    
+    }
+        
+    #footer {
+        width: 100%;
+        background:rgb(0,0,0,0.79);
+        height: 322px;
+        margin-top:338px;
+        padding:0px 63px;
+        padding-top:57px;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    #footer .box {
+        width: 250px;
+        color:#fff;
+    }
+    
+    #footer .box .quick-menu {
+        margin-top:40px;
+    
+    }
+    
+    
+    #footer .box .quick-menu .item{
+        margin-bottom:12px;
+    
+    }
+    #footer .box .quick-menu ,.item a{
+        color:#fff;
+        text-decoration: none;
+    }
+    
+    
+    
+    #footer .box form input {
+        width: 294px;
+        height: 42px;
+        background:transparent;
+        padding-left:20px;
+        color:#fff;
+        margin-top:30px;
+    }
+    
+    #footer .box form button {
+        background:#362f2f;
+        box-shadow: 5px 5px 4px rgba(0,0,0.25);
+        width: 163px;
+        height: 38px;
+        margin-top:29px;
+        color:#fff;
+    }
+    .bi-cart {
+        font-size: 20px;
+        padding: 0.5rem;
+        border-radius: 50%;
+        background-color: red;
+        color: #fff;
+    }
+
+    .total-price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    .total-price {
+    margin-right: 10px;
+    }
+
+    .checkout-button {
+    margin-left: 10px;
+    }
+
+    button.btn-secondary {
+    color: #fff; /* Màu chữ trắng */
+    background-color: #6c757d; /* Màu nền xám đậm */
+    border: none; /* Bỏ đường viền */
+    margin-top: 10px;
+    }
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="wrap-header">
+            <h1 class="header">Giỏ hàng</h1>
+        </div>
+        <div id="productCardContainer"></div>
+        <div class="total-price-container">
+            <div class="total-price">
+                <p id="totalPrice"></p>
+            </div>
+            <div class="checkout-button">
+                <button class="btn btn-success checkout-btn" onclick="checkoutHandler()">Thanh toán</button>
+            </div>
+        </div>
+        <div class="wrap-back">
+            <button class="back btn btn-secondary" onclick="backHandler()">Trở về</button>
+        </div>
+    </div>
+    <script>
+        let cart = JSON.parse(localStorage.getItem("CART"));
+
+        function backHandler() {
+            window.location.href = `show.html`;
+        }
+
+        function handleProducts() {
+            const productCardContainer = document.getElementById('productCardContainer');
+            const totalPriceContainer = document.getElementById('totalPrice');
+            productCardContainer.innerHTML = ''; // Xóa nội dung cũ trước khi hiển thị
+            if(cart.length === 0) {
+                productCardContainer.innerHTML += "<p>Giỏ hàng trống!</p>"
+            }
+            let totalPrice = 0; // Tổng giá tiền ban đầu
+            cart.forEach(product => {
+                const card = `<div class="product-card">
+                    <img src="${product.image}" alt="${product.name}" />
+                    <h4>${product.name}</h4>
+                    <p>Price: ${product.price}</p>
+                    <p>Quantity: ${product.quantity}</p>
+                    <!-- Nút "Xem chi tiết" có sự kiện onclick để chuyển hướng đến trang chi tiết -->
+                    <div>
+                        <button class="btn btn-primary" onclick="deleteToCart(${product.id})">Xóa khỏi giỏ</button>
+                    </div>
+                </div>`;
+                productCardContainer.innerHTML += card;
+                totalPrice += parseFloat(product.price) * parseInt(product.quantity); // Tính tổng giá tiền
+            });
+            // Hiển thị tổng giá tiền cần thanh toán
+            totalPriceContainer.innerHTML = `<strong>Tổng tiền cần thanh toán:</strong> ${totalPrice.toLocaleString()}.000 VND`;
+        }
+
+        function deleteToCart(id) {
+            cart = cart.filter(item => {
+                return item.id !== id.toString();
+            });
+
+            handleProducts();
+            localStorage.setItem("CART", JSON.stringify(cart));
+        }
+
+        function checkoutHandler() {
+            // Thêm logic xử lý thanh toán ở đây
+            alert("Đã thanh toán thành công!");
+            // Sau khi thanh toán, có thể xóa giỏ hàng
+            localStorage.removeItem("CART");
+            // Chuyển hướng đến trang khác sau khi thanh toán
+            window.location.href = `show.html`;
+        }
+
+        handleProducts();
+    </script>
+</body>
+</html>
